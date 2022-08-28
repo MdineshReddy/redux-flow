@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import LoginForm from "./components/LoginForm";
+import Posts from "./components/Posts";
 
 const App = () => {
   const user = useSelector((state) => state.user);
@@ -9,6 +10,7 @@ const App = () => {
     return (
       <div>
         <button onClick={() => dispatch({ type: "LOGOUT" })}>Logout</button>
+        <Posts />
       </div>
     );
   }
